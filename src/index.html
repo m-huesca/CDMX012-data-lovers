@@ -14,13 +14,13 @@
    
     <!--Apartado busqueda por nombre y numero (input y button) (fondo blanco)-->
     <section class="search1">
-     <div id="searchBox" class="filter1"> 
+     <nav id="searchBox" class="filter1"> 
       <form>
-        <label for="searchName">Name or number</label><br>
+        <label for="searchName"id="searchNameText">Name or number</label><br>
         <input type="text" id="searchName" name="searchName"><br>
       </form>
         <button id="searchButton"> Search </button>
-    </div>
+    </nav>
     
  <!--Texto busqueda nombre y número (p) (fondo blanco)-->
       <div class="filter1">
@@ -30,16 +30,16 @@
 
       
     <!-- sectionOne es donde esta el filtro y el top 5-->
-<div class="sectionOne">
+<section class="sectionOne">
   <!-- super filtro contiene 2 divs principales, (Type & weakness) y (candies & ability) -->
-<div class="superSearchBox"> 
-  <div class="superSearchTitle">
+<nav class="superSearchBox"> 
+  <nav class="superSearchTitle">
    <p id="superSearch">Super search <p>
-     <p id="">T= type W= weakness</p>
-    </div>
+     <p id="tYp">T= type W= weakness</p>
+   </nav>
     <!--(Type & weakness) lado izquierdo del filtro -->
-  <div class="filterPrincipal"> 
-     <!--caja de filtro filter2 para acomodar flex box, ¿necesitamos que el nombre sea div o puede ser label?-->
+  <main class="filterPrincipal"> 
+     <!--caja de filtro filter2 para acomodar flex box, -->
   <div class="filter2">
     <div class="typeSearch" id="bugs">Bugs</div>  
     <button class="typeButton">T</button> 
@@ -148,23 +148,23 @@
     <button class="weaknessButton">W</button>
   </div>
 
-  </div>
+</main>
 
   <!--(candies & ability) parte derecha del filtro -->
-<div class="abilityCandies">
+<main class="abilityCandies">
 <!-- resistant - ability -->
   <div class="filter3">
     <p for="ability">Ability</p> 
     <select name="ability" id="ability">
-      <option value="fairy">Fairy</option>
+      <option  value="fairy">Fairy</option>
     </select>
   </div>
 
   <div class="filter3">
     <p>Candies needed for evolution</p>
-    <button class="candy" id="candySmall"> 2 </button>
-    <button class="candy" id="candyMedium">4</button>
-    <button class="candy" id="candyBig">4</button>
+    <button class="candy" id="candySmall"><img src="https://lh3.googleusercontent.com/x7Z_gPYR9qSPu00REA7lVyiS5_x2Dl0QQ5UYTYBaqJStcDuzTDtFYYOpFxE8pU98AHQ=s99"/></button>
+    <button class="candy" id="candyMedium"><img src="https://lh3.googleusercontent.com/febvCiRw940OKgWbdy7SLcMMGphmReOF_XpkSek2GQ7ogewOXMPWYIkNityE3mnwlg1tlw=s99"/></button>
+    <button class="candy" id="candyBig"><img src="https://lh3.googleusercontent.com/o4bz-WZAELZ5DJwJ50b2rR2d9Hfzrn8N1WAK3lkTnLxFH-DSsyMaUhOK9nLYRNQeq1dR=s99"/></button>
   </div>
   <br>
   <br>
@@ -172,17 +172,14 @@
   <button class="filterButton">Search</button>
 </div>
 
-</div>
-  </div>
-    <!-- di-play de pokemones general -->
-  </div>
-
-</div>
-
+</main>
+</nav>
+</section>
+<!-- di-play de pokemones general -->
   <section class="pokemonDisplay">
     <p>Pokemon display:</p>
   </section>
-    
+  
    
   </body>
   <script src="main.js" type="module"></script>
