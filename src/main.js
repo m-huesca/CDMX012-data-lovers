@@ -11,9 +11,10 @@ import data from './data/pokemon/pokemon.js';
 function pokemonCard(pokemon){
     return `
     <div class="pokemonCard">
-    <img class="pokemonImage" src="${data.pokemon.img}">
-   <h2> ${data.pokemon.name} <span class="pokemonType"> (${data.pokemon.type}) </span> </h2>
-   <p> ${data.pokemon.num} </p>
+    <img class="cardImage" src="${data.pokemon[0].img}">
+    <label class="cardNum"> ${Object.values(pokemon.num).join("")} </label>
+   <h2 class="cardName"> ${Object.values(pokemon.name).join("")} </h2>
+   <label class="cardType"> ${Object.values(pokemon.type).join(" , ")} </label>
     </div>
     `
 }
