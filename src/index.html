@@ -31,14 +31,13 @@
       
     <!-- sectionOne es donde esta el filtro y el top 5-->
 <section class="sectionOne">
+  <div id="searchTitle">
+    <p id="superSearch">Super search      T= type W= weakness<p> 
+    </div>
   <!-- super filtro contiene 2 divs principales, (Type & weakness) y (candies & ability) -->
-<nav class="superSearchBox"> 
-  <nav class="superSearchTitle">
-   <p id="superSearch">Super search <p>
-     <p id="tYp">T= type W= weakness</p>
-   </nav>
+<div class="superSearchBox"> 
     <!--(Type & weakness) lado izquierdo del filtro -->
-  <main class="filterPrincipal"> 
+  <div class="filterPrincipal"> 
      <!--caja de filtro filter2 para acomodar flex box, -->
   <div class="filter2">
     <div class="typeSearch" id="bugs">Bugs</div>  
@@ -148,10 +147,10 @@
     <button class="weaknessButton">W</button>
   </div>
 
-</main>
+</div>
 
   <!--(candies & ability) parte derecha del filtro -->
-<main class="abilityCandies">
+<div class="abilityCandies">
 <!-- resistant - ability -->
   <div class="filter3">
     <p for="ability">Ability</p> 
@@ -172,8 +171,8 @@
   <button class="filterButton">Search</button>
 </div>
 
-</main>
-</nav>
+</div>
+</div>
 </section>
 <!-- di-play de pokemones general -->
   
