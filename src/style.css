@@ -208,9 +208,10 @@ box-shadow: 4px 4px 2px #060644;
     background-color: #0C4DA3;;  
     display:flex;
     justify-content:center;
-    height: 45%;
-    width: 85%;
+    height: auto;
+    width: 60%;
     border-radius: 35px;
+   
 }
 .abilityCandies{
     display:flex;
@@ -228,13 +229,19 @@ box-shadow: 4px 4px 2px #060644;
     display:flex;
     flex-direction:column;
 }
+.cardContainer{
+display:flex;
+margin: 5%;
+flex-direction: row;
+flex-wrap: wrap;
 
+}
 .pokemonCard{
-    height: 620px;
-    width: 350px;
+    height: auto;
+    width: 20%;
+    margin: 2.5%;
     background-color: #ccc;
     text-align: center;
-    border-radius: 35px;
     display: flex;
     flex-direction: column;
     
@@ -242,6 +249,12 @@ box-shadow: 4px 4px 2px #060644;
 
 .pokemonDisplay{
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    
+    
+}
+.sectionOne{
+    background-color: #79AED8;
+    padding-top:60px;
+    padding-bottom:60px;
+    align-items: center;
 }

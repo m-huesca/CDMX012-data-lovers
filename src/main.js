@@ -19,9 +19,10 @@ function pokemonCard(pokemon){
     `
 }
 
-document.getElementById("pokemonDisplay").innerHTML = `
-    <h1 class="displayTitle"> Pokedex (${data.pokemon.length}) <h1>
+document.getElementById("cardContainer").innerHTML = `
     ${data.pokemon.map(pokemonCard).join("")}
 `;
+
+
 //console.log(data);
  //<img class="pokemonImage" src="${data.pokemon.img}>
