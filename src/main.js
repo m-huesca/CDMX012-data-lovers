@@ -11,7 +11,7 @@ import data from './data/pokemon/pokemon.js';
 function pokemonCard(pokemon){
     return `
     <div class="pokemonCard">
-    <img class="cardImage" src="${data.pokemon[0].img}">
+    <img class="cardImage" src="${Object.values(pokemon.img).join("")}">
     <label class="cardNum"> ${Object.values(pokemon.num).join("")} </label>
    <p class="cardName"> ${Object.values(pokemon.name).join("")} </p>
    <label class="cardType"> ${Object.values(pokemon.type).join(" , ")} </label>
@@ -29,6 +29,5 @@ document.getElementById("searchButton").addEventListener("click", function(){
   document.getElementById("searchResults").value = filterData(searchBy);
   });
 
-console.log(Object.values(pokemon.num).join(""));
 //console.log(data);
  //<img class="pokemonImage" src="${data.pokemon.img}>
