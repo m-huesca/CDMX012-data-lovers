@@ -26,10 +26,18 @@ for (var i=0 ; i < data.pokemon.length ; i++)
 // JSON.stringify(result, null, 2)
 
 export let searchPokemon = function(pokemon_database, pokemon_name) {
-
   return pokemon_database.filter(pokemon => pokemon.name === pokemon_name || pokemon.num === pokemon_name);
 }
-
+export function pokemonCard(pokemon){
+  return `
+  <div class="pokemonCard">
+   <img class="cardImage" src="${Object.values(pokemon.img).join("")}">
+  <label class="cardNum"> ${Object.values(pokemon.num).join("")} </label>
+ <p class="cardName"> ${Object.values(pokemon.name).join("")} </p>
+ <label class="cardType ${Object.values(pokemon.type)}"> ${Object.values(pokemon.type).join(" , ")} </label>
+  </div>
+  `
+}
 // export const filterData = (searchBy) => {
 //   var results = [];
 //   var searchField = data.pokemon.name;
