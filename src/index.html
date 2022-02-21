@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Pokedex</title>
     <link rel="stylesheet" href="style.css" />
+     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1026px-Pok%C3%A9_Ball_icon.svg.png">
   </head>
   <!--logo y header -->
   <header> <img src= https://letsdownloadgame.com/wp-content/uploads/2021/07/pokemon-go-png-logo-3160.png id="logo" width="77.5" height="40.2" ></header>
@@ -27,157 +28,26 @@
         <p id="searchText"> Search your Pokemon by its name or by it pokedex number </p>
       </div>
     </section>
- <!--Texto busqueda nombre y número (p) (fondo blanco)-->
-<div class="searchResults" name="searchResults"> </div>
 
-    <!-- sectionOne es donde esta el filtro y el top 5-->
-<section class="sectionOne">
-  <div id="searchTitle">
-    <p id="typeAndWeaknessTitle">Super search      T= type W= weakness </p> 
-    </div>
-  <!-- super filtro contiene 2 divs principales, (Type & weakness) y (candies & ability) -->
-<div class="superSearchBox"> 
-    <!--(Type & weakness) lado izquierdo del filtro -->
-  <div class="filterPrincipal"> 
-     <!--caja de filtro filter2 para acomodar flex box, -->
-  <div class="filter2">
-    <div class="typeSearch" id="bugs">Bugs</div>  
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch"id="dragon">Dragon</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>  
-
-  <div class="filter2">
-    <div class="typeSearch" id="fairy"> Fairy</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>  
-
-  <div class="filter2">
-    <div class="typeSearch" id="fire">Fire</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch" id="ghost">Ghost</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch" id="ground">Ground</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-   <div class="filter2">
-    <div class="typeSearch" id="normal">Normal</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-   <div class="filter2">
-    <div class="typeSearch" id="psychic">Psychic</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-   <div class="filter2">
-    <div class="typeSearch" id="steel">Steel</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-   <div class="filter2">
-    <div class="typeSearch" id="dark">Dark</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch" id="electric">Electric</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch"id="fighting">Fighting </div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch"id="flying"> Flying </div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch" id="grass"> Grass </div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-   <div class="filter2">
-    <div class="typeSearch" id="ice">Ice</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch" id="poison">Poison</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-   <div class="filter2">
-    <div class="typeSearch" id="rock"> Rock </div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-    
-  <div class="filter2">
-    <div class="typeSearch" id="water">Water</div>
-    <button class="typeButton">T</button> 
-    <button class="weaknessButton">W</button>
-  </div>
-
-</div>
-
-  <!--(candies & ability) parte derecha del filtro -->
-<div class="abilityCandies">
-<!-- resistant - ability -->
-  <div class="filter3">
-    <p for="ability">Ability</p> 
-    <select name="ability" id="ability">
-      <option  value="fairy">Fairy</option>
+  <div id="boxMenu">
+    <label for="typeMenu">Type</label>
+    <select name="typeMenu" id="typeMenu">
+      
     </select>
+
+    <label for="weaknessMenu">Weakness</label>
+    <select name="weaknessMenu" id="weaknessMenu">
+    <option value="Weakness">Prueba</option>
+    </select>
+
+  <label for="abilityMenu">Ability</label>
+  <select name="abilityMenu" id="abilityMenu">
+    <option value="Ability">Prueba</option>
+  </select>
   </div>
 
-  <div class="filter3">
-    <p>Candies needed for evolution</p>
-    <button class="candy" id="candySmall"><img src="https://lh3.googleusercontent.com/x7Z_gPYR9qSPu00REA7lVyiS5_x2Dl0QQ5UYTYBaqJStcDuzTDtFYYOpFxE8pU98AHQ=s99"/></button>
-    <button class="candy" id="candyMedium"><img src="https://lh3.googleusercontent.com/febvCiRw940OKgWbdy7SLcMMGphmReOF_XpkSek2GQ7ogewOXMPWYIkNityE3mnwlg1tlw=s99"/></button>
-    <button class="candy" id="candyBig"><img src="https://lh3.googleusercontent.com/o4bz-WZAELZ5DJwJ50b2rR2d9Hfzrn8N1WAK3lkTnLxFH-DSsyMaUhOK9nLYRNQeq1dR=s99"/></button>
-  </div>
-  <br>
-  <br>
-<div class="filter3">
-  <button class="filterButton">Search</button>
-</div>
-
-</div>
-</div>
-</section>
-<!-- di-play de pokemones general -->
-
-<lu class="searchResult" id="searchResult"></lu>
+    
+<!-- display de pokemones general -->
 
 <section class="pokemonDisplay" id="pokemonDisplay">
   <div class="cardContainer" id="cardContainer">

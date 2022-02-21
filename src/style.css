@@ -1,16 +1,13 @@
 body{
-    background-color: #79AED8;
+    background-color: #B8E5FD;
     font-family: "Baloo Tamma 2";
 }
 header{
     height: 20%;
     background-color: #063376;
-    border-color: #79AED8;
+    border-color: #B8E5FD;
 }
-select{
-    font-family: "Baloo Tamma 2";
-    font-size: 0.94rem;
-}
+
 /*Apartado busqueda por nombre y numero (input y button) (fondo blanco)*/
 #searchBox {
     background-color: white;
@@ -21,6 +18,12 @@ p{
     font-size: 1.5rem;
     font-weight: bold;
 }
+#boxMenu{
+    padding-left: 35%;
+    padding-top: 20px;
+    align-items: center;
+}
+
 #searchTitle{
     color: #022761;
 }
@@ -35,7 +38,7 @@ p{
     font-size: 1.1rem;
     font-family: 'Baloo Tamma 2';
     font-weight:bolder;
-    background-color: #79AED8;
+    background-color: white;
     border-radius: 2rem;
     margin: 1%;
 }
@@ -88,169 +91,16 @@ p{
     margin-left: 3%;
     margin-right: 90%;
 }
-
-/*Tipos de pokemon del super buscador*/
-.typeSearch{
-height: 1.68rem;
-width:6.25rem;
-font-size:1.4rem;
-color:white;
-font-family: 'Baloo Tamma 2';
-font-weight: bolder;
-border-radius:35px;
-margin: 10px;
-text-align: center;
-padding-bottom: 4px;
-box-shadow: 4px 4px 2px #030322;
-}
-
-/*Tipos de pockemon del super buscador id individual para los colores*/
-
-#bugs{
-    background-color:#9ABD76;
-}
-
-#dragon{
-  background-color: #E98A57;
-}
-
-#fairy{
-    background-color:#F38AE9;
-}
-
-#fire{
-    background-color: #C53943;
-}
-
-#ghost{
-    background-color: #393656;
-}
-
-#ground{
-    background-color: #C9D77B;
-}
-
-#normal{
-    background-color: #5D748D;
-}
-
-#psychic{
-    background-color: #47294C;
-}
-
-#steel{
-    background-color: #949494;
-}
-
-#dark{
-    background-color: #33373A;
-}
-
-#electric{
-    background-color: #F0C964;
-}
-
-#fighting{
-    background-color:#E6514C;
-}
-
-#flying{
-    background-color: #74B3D9 ;
-}
-
-#grass{
-    background-color: #48978A ;
-}
-
-#ice{
-    background-color: #59A5D2;
-}
-
-#poison{
-    background-color: #484276;
-}
-
-#rock{
-    background-color: #966F24;
-}
-
-#water{
-    background-color: #417B9E;
-}
-
-/*BOTON DE TIPO Y DEBILIDAD*/
-
-.typeButton, 
-.weaknessButton{
-    background-color: #5D748D;
-    border-radius: 50px;
-    height: 25px;
-    width: 25px;
-    font-size: 15px;
-    font-weight: bolder;
-    font-family: 'Baloo Tamma 2';
-    color: white;
-    margin: 2px;
-    box-shadow: 2px 2px 2px #060644;
-}
-/*flex box botons*/
-.filterPrincipal{
-    display:flex;
-    flex-direction:row;
-    flex-wrap: wrap;
-    flex-grow: 2;
-    background-color:#022761;
-    height:auto;
-    width: 40%;
-    padding: 10px;
-    border-radius: 35px;
-    margin: 0%;
-
-
-}
-.filter2{
-    display:flex;
-    flex-direction:row wrap;
-    align-items:center;
-}
 .pokemonDisplay{
     background-color: #FFFF;
 }
-.superSearchBox{
-    background-color:  #022761;  
-    display:flex;
-    border-radius: 35px;
-    width: 60%
-   
-
-   
-}
-.abilityCandies{
-    display:flex;
-    flex-direction:column;
-    background-color: #022761;
-    padding: 10px;
-    border-radius: 35px;
-}
-
-.filter3{
-    display:flex;
-    flex-direction:column;
-}
-.superSearchTitle{
-    display:flex;
-    flex-direction:column;
-}
-.superSearch{
-    color: #0C4DA3;
-}
 /*Cartas de Pokemons */
 .cardContainer{
-display:flex;
-margin: 5%;
-flex-direction: row;
-flex-wrap: wrap;
-background-color: #B8E5FD;
+    display:flex;
+    margin: 5%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: #B8E5FD;
 }
 .pokemonCard{
     height: auto;
@@ -271,20 +121,6 @@ background-color: #B8E5FD;
     
     
 }
-.sectionOne{
-    background-color:#B8E5FD;
-    padding-top:3%;
-    padding-bottom:3%;
-    
-}
-/*Boton ddulces*/
- .candy, .candy img{
-    height: 65px;
-    width: 65px;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: row;
-}
 
 .searchTitle{
     align-items: center;
@@ -304,8 +140,12 @@ background-color: #B8E5FD;
     margin-left: 8%;
 }
 .cardType{
-    text-align: center;
-    margin: 0%;
+ text-align: center;
+  margin: 0%;
+  color: white;
+  border-radius: 5px;
+  width: auto;
+  height: 25px;
 }
 .cardImage{
     height: 70%;
@@ -313,8 +153,57 @@ background-color: #B8E5FD;
     margin: 2px;
 }
 .fire{
-  color:red;
+  background-color: #C53943;
+  border-radius: 5px;
+  width: 20%;
+  height: 25px;
+}
+
+.bug{
+ background-color:#9ABD76 ;
+} 
+.dragon{
+   background-color: #E98A57;
+}
+.ghost {
+    background-color:#393656;
+}
+.ground{ 
+    background-color:#C9D77B;
+}
+.normal{
+    background-color:#5D748D;
+}
+.steel {
+    background-color: #949494;
+}
+.psychic{ 
+    background-color:#47294C;
+}
+.dark {
+ background-color: #33373A;
+} 
+.electric {
+background-color:#F0C964;
+}
+.fighting {
+    background-color: #E6514C;
+}
+.flying {
+    background-color:#74B3D9;
 }
 .grass{
-    color:green;
+    background-color:#48978A ;
+} 
+.ice {
+    background-color:#59A5D2;
+}
+.poison {
+    background-color:#484276;
+}
+.rock {
+    background-color: gray;
+}
+.water {
+    background-color: #417B9E;
 }

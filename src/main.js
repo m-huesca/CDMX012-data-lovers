@@ -1,16 +1,8 @@
-import {searchPokemon, pokemonCard} from './data.js';
+import {searchPokemon, pokemonCard, navBar} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
-// import data from './data/rickandmorty/rickandmorty.js';
-//JSON.stringify())= para tranformar la data a string
-//json.parse()=to convert the string into a JavaScript object:
-//var obj = JSON.parse(JSON.stringify(data));
-//document.getElementById("pokemonDisplay").innerHTML = obj.pokemon[0].num + " " + obj.pokemon[0].name + " " + obj.pokemon[0].type;
-
 let pokemon_database = data.pokemon;
-
-//funcion para template literals de pokemon cards
 
 
 // display pokemon html + json
@@ -26,20 +18,10 @@ document.getElementById("searchButton").addEventListener("click", function(){
     document.getElementById("cardContainer").innerHTML = `
     ${pokemon.map(pokemonCard).join("")}
 `;
-   /*document.getElementById("searchResult").innerHTML = `
-   <div class="searchResult">
-    ${pokemon.map(pokemonCard).join("")}
-    </div>
-   `;*/
+   
   });
 
-// function printSearch(pokemon) {
-//     document.getElementById("searchResult").innerHTML = `
-//     ${pokemon.map(pokemonCard).join("")}
-// `;
-// }
-  
-
-
-//console.log(data);
- //<img class="pokemonImage" src="${data.pokemon.img}>
+  //funcion para drop down menu
+document.getElementById("typeMenu").innerHTML = `
+${data.pokemon.map(navBar).join("")}
+`;
