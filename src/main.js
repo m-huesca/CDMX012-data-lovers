@@ -11,7 +11,17 @@ import data from './data/pokemon/pokemon.js';
 let pokemon_database = data.pokemon;
 
 //funcion para template literals de pokemon cards
-
+function pokemonCard(pokemon){
+    
+    return `
+    <div class="pokemonCard">
+    <img class="cardImage" src="${Object.values(pokemon.img).join("")}">
+    <label class="cardNum"> ${Object.values(pokemon.num).join("")} </label>
+   <p class="cardName"> ${Object.values(pokemon.name).join("")} </p>
+   <label class="cardType"> ${Object.values(pokemon.type).join(" , ")} </label>
+    </div>
+    `
+}
 
 // display pokemon html + json
 document.getElementById("cardContainer").innerHTML = `
@@ -33,13 +43,5 @@ document.getElementById("searchButton").addEventListener("click", function(){
    `;*/
   });
 
-// function printSearch(pokemon) {
-//     document.getElementById("searchResult").innerHTML = `
-//     ${pokemon.map(pokemonCard).join("")}
-// `;
-// }
-  
 
 
-//console.log(data);
- //<img class="pokemonImage" src="${data.pokemon.img}>
