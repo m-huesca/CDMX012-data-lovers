@@ -32,8 +32,8 @@ export function navBar(pokemon_database) {
   
   pokemon_database.map(pokemon => allPokemonType.push((pokemon.type)))
   let duplicateTypes = allPokemonType.flat()
-  const allTypes = new Set(duplicateTypes);
-  console.log( allTypes);
+  const allTypes = JSON.stringify(new Set(duplicateTypes));
+  return allTypes
 }
 
 /*`
