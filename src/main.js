@@ -22,6 +22,4 @@ document.getElementById("searchButton").addEventListener("click", function(){
   });
 
   //funcion para drop down menu
-document.getElementById("typeMenu").innerHTML = `
-${data.pokemon.map(navBar).join("")}
-`;
+document.getElementById("typeMenu").innerHTML = `${navBar(pokemon_database)}`;
