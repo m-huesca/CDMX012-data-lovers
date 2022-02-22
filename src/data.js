@@ -14,7 +14,9 @@ export function pokemonCard(pokemon){
   `
 }
 export function navBar(pokemon) {
-  console.log(Object.values(pokemon.type).join(" "));
+  let typeOne = Object.values(pokemon.type[0]).join("");
+  let typeTwo = Object.values(pokemon.type[1]).join("")
+  console.log(typeOne, typeTwo);
   return `
   <option>${Object.values(pokemon.type).join(" ")}</option>
   ` 
