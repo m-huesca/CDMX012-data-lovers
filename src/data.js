@@ -9,12 +9,12 @@ export function pokemonCard(pokemon){
    <img class="cardImage" src="${Object.values(pokemon.img).join("")}">
   <label class="cardNum"> ${Object.values(pokemon.num).join("")} </label>
  <p class="cardName"> ${Object.values(pokemon.name).join("")} </p>
- <label class="cardType ${Object.values(pokemon.type).join(" ")}"> ${Object.values(pokemon.type).join(" ")} </label>
+ <label class="cardType ${Object.values(pokemon.type).join(" ")}" > ${Object.values(pokemon.type).join(" ")} </label>
   </div>
   `
 }
 export function navBar(pokemon) {
-  //let typeDoubleOne = Object.values(pokemon.type[0]).join("");
+  console.log(Object.values(pokemon.type).join(" "));
   return `
   <option>${Object.values(pokemon.type).join(" ")}</option>
   ` 
