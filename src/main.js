@@ -1,9 +1,11 @@
-import {searchPokemon, pokemonCard, navBar} from './data.js';
+import {searchPokemon, pokemonCard, grass} from './data.js';
+import pokemon from './data/pokemon/pokemon.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
 let pokemon_database = data.pokemon;
-
+//let grassPrueba = (Object.values(pokemon_database[3])[7]);
+//console.log(grassPrueba);
 
 // display pokemon html + json
 document.getElementById("cardContainer").innerHTML = `
@@ -18,10 +20,45 @@ document.getElementById("searchButton").addEventListener("click", function(){
     document.getElementById("cardContainer").innerHTML = `
     ${pokemon.map(pokemonCard).join("")}
 `;
-   
   });
 
-  //funcion para drop down menu
-document.getElementById("typeMenu").innerHTML = `
-<option> ${navBar(pokemon_database)} </option>
+/* document.getElementById("poison").addEventListener("click", function() {
+    let selectPoison = document.getElementById("poison");
+    let poison = filterPoison(pokemon_database, selectPoison);
+    document.getElementById("cardContainer").innerHTML = `
+    ${poison.map(pokemonCard).join("")}
 `;
+})
+*/
+// funcionalidad del drop down menu types
+// queryselect indicando con la class el select que nos estamos refieriendo
+const selectType = document.querySelector('.typeMenu');
+
+/*selectType.addEventListener('change', (event) => {
+    const selectType = document.querySelector('.resultado');
+    const selectionType = event.target.value
+    selectType.textContent = `
+    Pokemon de ${selectionType}`;
+});
+*/
+//añadimos un addEventListener con 'change' y una función para que cuando cambie el selector, active la funcion
+selectType.addEventListener('change', function () {
+
+    // selectionType es el valor del select
+    let selectionType = document.getElementsByClassName("typeOption").value;
+    //pokemon es la variable que contiene nuestra funcion
+    let pokemon = grass(pokemon_database, selectionType)
+    // indicando que el resultado de la funcion lo pase a texto y aparezca en el div resultado 
+    //pokemon.map (funcion que filtra y dandole los argumentos)
+    document.getElementById("resultado").innerHTML = `
+    ${pokemon.map(pokemonCard).join("")}
+`;
+});
+
+//`${pokemon.map(pokemonCardPrueba).join("")}`
+
+
+
+  //funcion para drop down menu
+//document.getElementById("typeMenu").innerHTML = `<option class"${navBar(pokemon_database)}`;
+

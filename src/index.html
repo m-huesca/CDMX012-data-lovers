@@ -31,8 +31,25 @@
 
   <div id="boxMenu">
     <label for="typeMenu">Type</label>
-    <select name="typeMenu" id="typeMenu">
-      
+    <select class= "typeMenu" name="typeMenu" id="typeMenu">
+      <option class="typeOption" id ="grass" value="grass">Grass</option>
+      <option class="typeOption" id="poison" value="poison">Poison</option>
+      <option class="typeOption" id="fire" value="fire">Fire</option>
+      <option class="typeOption" id="flying" value="flying">Flying</option>
+      <option class="typeOption" id="water" value="water">Water</option>
+      <option class="typeOption" id="bug"  value="bug">Bug</option>
+      <option class="typeOption" id="nomal" value="normal">Normal</option>
+      <option class="typeOption" id="electric" value="electric">Electric</option>
+      <option class="typeOption" id="ground" value="ground">Ground</option>
+      <option class="typeOption" value="fighting" id="fighting">Fighting</option>
+      <option class="typeOption" value="psychic" id="psychic">Psychic</option>
+      <option class="typeOption" value="rock" id="rock">Rock</option>
+      <option class="typeOption" value="ice" id="ice">Ice</option>
+      <option class="typeOption" value="ghost" id="ghost">Ghost</option>
+      <option class="typeOption" value="dragon" id="dragon">Dragon</option>
+      <option class="typeOption" value="fairy" id="fairy">Fairy</option>
+      <option class="typeOption" value="dark" id="dark"="">Dark</option>
+      <option class="typeOption" value="steel" id="steel">Steel</option>    
     </select>
 
     <label for="weaknessMenu">Weakness</label>
@@ -50,6 +67,7 @@
 <!-- display de pokemones general -->
 
 <section class="pokemonDisplay" id="pokemonDisplay">
+  <div class="resultado" id="resultado"></div>
   <div class="cardContainer" id="cardContainer">
   </div>
   </section>
