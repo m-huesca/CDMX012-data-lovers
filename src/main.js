@@ -20,18 +20,19 @@ document.getElementById("searchButton").addEventListener("click", function(){
     document.getElementById("cardContainer").innerHTML = `
     ${pokemon.map(pokemonCard).join("")}
 `;
-  });
+ 
 
-/* document.getElementById("poison").addEventListener("click", function() {
-    let selectPoison = document.getElementById("poison");
-    let poison = filterPoison(pokemon_database, selectPoison);
-    document.getElementById("cardContainer").innerHTML = `
-    ${poison.map(pokemonCard).join("")}
-`;
-})
-*/
+
+
+
+
+
+
+
+
+
+
 // funcionalidad del drop down menu types
-// queryselect indicando con la class el select que nos estamos refieriendo
 const selectType = document.querySelector('.typeMenu');
 
 /*selectType.addEventListener('change', (event) => {
@@ -53,12 +54,4 @@ selectType.addEventListener('change', function () {
     document.getElementById("resultado").innerHTML = `
     ${pokemon.map(pokemonCard).join("")}
 `;
-});
-
-//`${pokemon.map(pokemonCardPrueba).join("")}`
-
-
-
-  //funcion para drop down menu
-//document.getElementById("typeMenu").innerHTML = `<option class"${navBar(pokemon_database)}`;
-
+})});
