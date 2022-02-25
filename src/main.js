@@ -1,11 +1,12 @@
-import {searchPokemon, pokemonCard, grass} from './data.js';
-import pokemon from './data/pokemon/pokemon.js';
+import {searchPokemon, pokemonCard, byHighest, type, byLowest} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
 let pokemon_database = data.pokemon;
 //let grassPrueba = (Object.values(pokemon_database[3])[7]);
 //console.log(grassPrueba);
+
+//Sort by highest number
 
 // display pokemon html + json
 document.getElementById("cardContainer").innerHTML = `
@@ -20,38 +21,39 @@ document.getElementById("searchButton").addEventListener("click", function(){
     document.getElementById("cardContainer").innerHTML = `
     ${pokemon.map(pokemonCard).join("")}
 `;
- 
+})
 
+//Sort by highest number */
+document.getElementById("byHighest").addEventListener("click", function(){
+    //(pokemons)
+    let pokemonByHighest = byHighest(pokemon_database);
+document.getElementById("cardContainer").innerHTML = `
+  ${pokemonByHighest.map(pokemonCard).join("")}
+    `;
+})
 
+//Sort by lowest
+document.getElementById("byLowest").addEventListener("click", function(){
+    //(pokemons)
+    let pokemonByLowest = byLowest(pokemon_database);
+document.getElementById("cardContainer").innerHTML = `
+  ${pokemonByLowest.map(pokemonCard).join("")}
+    `;
+})
 
-
-
-
-
-
-
-
-
-// funcionalidad del drop down menu types
+// funcionalidad del drop down menu types ejemplo
 const selectType = document.querySelector('.typeMenu');
 
-/*selectType.addEventListener('change', (event) => {
-    const selectType = document.querySelector('.resultado');
-    const selectionType = event.target.value
-    selectType.textContent = `
-    Pokemon de ${selectionType}`;
-});
-*/
 //añadimos un addEventListener con 'change' y una función para que cuando cambie el selector, active la funcion
 selectType.addEventListener('change', function () {
-
-    // selectionType es el valor del select
-    let selectionType = document.getElementsByClassName("typeOption").value;
+   // selectionType es el valor del select
+    let select = document.getElementById("typeMenu");
+    let selectValue = select.options[select.selectedIndex].value;
     //pokemon es la variable que contiene nuestra funcion
-    let pokemon = grass(pokemon_database, selectionType)
+    let pokemonsByType = type(pokemon_database, selectValue)
     // indicando que el resultado de la funcion lo pase a texto y aparezca en el div resultado 
     //pokemon.map (funcion que filtra y dandole los argumentos)
-    document.getElementById("resultado").innerHTML = `
-    ${pokemon.map(pokemonCard).join("")}
+    document.getElementById("cardContainer").innerHTML = `
+    ${pokemonsByType.map(pokemonCard).join("")}
 `;
-})});
+});

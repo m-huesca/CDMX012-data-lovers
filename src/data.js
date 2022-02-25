@@ -29,13 +29,21 @@ export function pokemonCard(pokemon){
 
 }
 
-export let grass = function (pokemon_database, selectionType) {
-   return (pokemon_database.filter(pokemon => pokemon.type == selectionType));
+export const type = function (pokemons, selectionType) {
+   return (pokemons.filter(pokemon => pokemon.type === selectionType));
 }
-  
- 
-  
-
+//SORT by highest
+export const byHighest = function (pokemons) {
+  return pokemons.sort((a,b) => {
+    return b.num - a.num ;
+  })
+  }
+//SORT by lowest
+export const byLowest = function (pokemons) {
+  return pokemons.sort((a,b) => {
+    return a.num - b.num ;
+  })
+}
 
 
 
