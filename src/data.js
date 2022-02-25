@@ -30,7 +30,7 @@ export function pokemonCard(pokemon){
 }
 
 export const type = function (pokemons, selectionType) {
-   return (pokemons.filter(pokemon => pokemon.type === selectionType));
+   return (pokemons.filter(pokemon => pokemon.type[0] === selectionType || pokemon.type[1] === selectionType));
 }
 //SORT by highest
 export const byHighest = function (pokemons) {

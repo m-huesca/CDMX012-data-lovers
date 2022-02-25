@@ -3,10 +3,7 @@ import {searchPokemon, pokemonCard, byHighest, type, byLowest} from './data.js';
 import data from './data/pokemon/pokemon.js';
 
 let pokemon_database = data.pokemon;
-//let grassPrueba = (Object.values(pokemon_database[3])[7]);
-//console.log(grassPrueba);
 
-//Sort by highest number
 
 // display pokemon html + json
 document.getElementById("cardContainer").innerHTML = `
