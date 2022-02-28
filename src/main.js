@@ -4,7 +4,6 @@ import data from './data/pokemon/pokemon.js';
 
 let pokemon_database = data.pokemon;
 
-
 // display pokemon html + json
 document.getElementById("cardContainer").innerHTML = `
     ${data.pokemon.map(pokemonCard).join("")}

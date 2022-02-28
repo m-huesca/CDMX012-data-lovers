@@ -100,19 +100,17 @@ p{
     background-color: #B8E5FD;
 
 }
+
 .pokemonCard{
     height: auto;
     width: 18%;
     margin: 1%;
-    background-color: #B6B6CD;
+    background-color: white;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
     
 }
-
-
-
 
 .searchTitle{
     align-items: center;
@@ -131,6 +129,9 @@ p{
     align-items: left;
     margin-left: 8%;
 }
+p.cardName{
+    color: #33373A;
+}
 .cardType{
  text-align: center;
   margin: 0%;
@@ -148,7 +149,9 @@ p{
 .fire{
   background-color: #C53943;
 }
-
+.fairy{
+    background-color: #F38AE9;
+}
 .bug{
  background-color:#9ABD76 ;
 } 

@@ -1,5 +1,4 @@
 
-import data from './data/pokemon/pokemon.js';
 
 export let searchPokemon = function(pokemon_database, pokemon_name) {
   return pokemon_database.filter(pokemon => pokemon.name === pokemon_name || pokemon.num === pokemon_name);
