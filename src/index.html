@@ -54,17 +54,21 @@
       <option class="typeOption" value="dark" id="dark">Dark</option>
       <option class="typeOption" value="steel" id="steel">Steel</option>    
       </select>
+      <a href="stats.html"><button> See stats</button></a>
       <button id="stats" name="stats">Stats</button>
   </div>
  
-  <canvas id="myChart" width="10px" height="10px"></canvas>
-    
+  
 <!-- display de pokemones general -->
 
 <section class="pokemonDisplay" id="pokemonDisplay">
+  <div id="chart">
+    <canvas id="myChart" width="100" height="100"></canvas>
+  </div>
+
   <div class="cardContainer" id="cardContainer">
   </div>
-  </section>
+</section>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="main.js" type="module"></script>

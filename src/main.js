@@ -66,7 +66,7 @@ selectType.addEventListener('change', function () {
 //aplciar Grafica
 
 document.getElementById("stats").addEventListener("click", function(){
-document.getElementById("myChart").innerHTML = cargarGrafica();
+document.getElementById("cardContainer").innerHTML = cargarGrafica();
 })
 
 //Grafica 

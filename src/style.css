@@ -195,3 +195,11 @@ background-color:#F0C964;
 .water {
     background-color: #417B9E;
 }
+.pokemonDisplay{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chart{
+    width: 40%;
+}
