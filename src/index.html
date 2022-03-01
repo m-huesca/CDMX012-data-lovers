@@ -29,15 +29,12 @@
       </div>
     </section>
 
-  <div id="boxMenu">
-    <div>
-      <label id="sortLabel">Sort by number:</label>
-      <button id="byHighest">251-1</button>
-      <button id="byLowest">1-251</button>
-    </div>
-
-    <label for="typeMenu" id="typelabel">Type</label>
-    <select class= "typeMenu" name="typeMenu" id="typeMenu">
+    <div id="buttonNav"> 
+      <label class="filters" id="sortLabel"> Sort by number </label> 
+      <button class="filters" id="byHighest"> 251-1 </button>
+      <button class="filters" id="byLowest"> 1-251 </button>
+      <label for="typeMenu" id="typelabel">Filter by type</label>
+      <select class= "typeMenu" name="typeMenu" id="typeMenu">
       <option class="typeOption" id ="grass" value="grass">Grass</option>
       <option class="typeOption" id="poison" value="poison">Poison</option>
       <option class="typeOption" id="fire" value="fire">Fire</option>
@@ -56,9 +53,8 @@
       <option class="typeOption" value="fairy" id="fairy">Fairy</option>
       <option class="typeOption" value="dark" id="dark">Dark</option>
       <option class="typeOption" value="steel" id="steel">Steel</option>    
-    </select>
-
-    <button id="stats" name="stats">Stats</button>
+      </select>
+      <button id="stats" name="stats">Stats</button>
   </div>
  
   <canvas id="myChart" width="10px" height="10px"></canvas>
