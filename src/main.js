@@ -9,12 +9,14 @@ reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de p
     location.reload();
 });
 
+//array 251 pokemones
 let pokemon_database = data.pokemon;
 
 // display pokemon html + json
 document.getElementById("cardContainer").innerHTML = `
     ${data.pokemon.map(pokemonCard).join("")}
 `;
+
 // funcion para buscar pokemones por nombre o numero
 
 document.getElementById("searchButton").addEventListener("click", function(){
@@ -61,44 +63,53 @@ selectType.addEventListener('change', function () {
 `;
 });
 
-//Grafica 
+//aplciar Grafica
 
-let datos,
+document.getElementById("stats").addEventListener("click", function(){
+document.getElementById("myChart").innerHTML = cargarGrafica();
+})
+
+//Grafica 
+let
 generationTotal,
 generationiPercentage,
 generationiiPercentage,
 generationi = 0,
 generationii = 0,
 resultado =[];
-const variables =['generationi','generationii'];
 
+const variables =['generationi','generationii'];
+const pokemonGenerations = pokemon_database.map(pokemon => pokemon.generation.num);
 const grafica = document.querySelector('#myChart');
 
 
+generationPokemon();
 function generationPokemon(){
-    datos.forEach((Pokemon)=>{
-        if(Pokemon.generation.num ===  "generation i"){
+    pokemonGenerations.forEach((generation)=>{
+        if(generation ===  "generation i"){
           generationi+=1;
         }else{
             generationii+=1;
         }
     });
+
     generationTotal= generationi+generationii;
     generationiPercentage=(generationi*100)/generationTotal;
     generationiiPercentage=(generationii*100)/generationTotal;
     resultado.push(generationiPercentage);
     resultado.push(generationiiPercentage);
 
-    return  generationPokemon;
+    return resultado;
 }
-const ctx = document.getElementById('myChart').getContext('2d');
+
+
 function cargarGrafica(){ 
 const myChart = new Chart(grafica, {
     type: 'bar',
     data: {
         labels:variables,
         datasets: [{
-            label: '# of Votes',
+            label: '# of pokemons',
             data: resultado,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -119,5 +130,4 @@ const myChart = new Chart(grafica, {
         }
     }
 });
-return(cargarGrafica);
 }
