@@ -8,7 +8,7 @@
      <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/1026px-Pok%C3%A9_Ball_icon.svg.png">
   </head>
   <!--logo y header -->
-  <header> <img src= "https://letsdownloadgame.com/wp-content/uploads/2021/07/pokemon-go-png-logo-3160.png" id="logo" width="77.5" height="40.2" ></header>
+  <header><img src= "https://letsdownloadgame.com/wp-content/uploads/2021/07/pokemon-go-png-logo-3160.png" id="logo" width="77.5" height="40.2" ></header>
   <body>
 
     <div id="root"></div>
@@ -31,12 +31,12 @@
 
   <div id="boxMenu">
     <div>
-      <label>Sort by number:</label>
+      <label id="sortLabel">Sort by number:</label>
       <button id="byHighest">251-1</button>
       <button id="byLowest">1-251</button>
     </div>
 
-    <label for="typeMenu">Type</label>
+    <label for="typeMenu" id="typelabel">Type</label>
     <select class= "typeMenu" name="typeMenu" id="typeMenu">
       <option class="typeOption" id ="grass" value="grass">Grass</option>
       <option class="typeOption" id="poison" value="poison">Poison</option>
@@ -60,6 +60,7 @@
 
   </div>
 
+  <canvas id="myChart" width="400" height="400"></canvas>
     
 <!-- display de pokemones general -->
 
@@ -69,6 +70,7 @@
   </div>
   </section>
   
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.1/chart.min.js" integrity="sha512-QSkVNOCYLtj73J4hbmVoOV6KVZuMluZlioC+trLpewV8qMjsWqlIQvkn1KGX2StWvPMdWGBqim1xlC8krl1EKQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="main.js" type="module"></script>
+</body>
 </html>

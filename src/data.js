@@ -2,6 +2,7 @@
 
 export let searchPokemon = function(pokemon_database, pokemon_name) {
   return pokemon_database.filter(pokemon => pokemon.name === pokemon_name || pokemon.num === pokemon_name);
+ console.log(searchPokemon);
 }
 export function pokemonCard(pokemon){
   if (pokemon.type.length > 1){

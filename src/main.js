@@ -2,6 +2,13 @@ import {searchPokemon, pokemonCard, byHighest, type, byLowest} from './data.js';
 // import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 
+/* Reload página con la imagen*/
+const reload = document.getElementById('logo');
+
+reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+    location.reload();
+});
+
 let pokemon_database = data.pokemon;
 
 // display pokemon html + json
@@ -53,3 +60,64 @@ selectType.addEventListener('change', function () {
     ${pokemonsByType.map(pokemonCard).join("")}
 `;
 });
+
+//Grafica 
+
+let datos,
+generationTotal,
+generationiPercentage,
+generationiiPercentage,
+generationi = 0,
+generationii = 0,
+resultado =[];
+const variables =['generationi','generationii'];
+
+const grafica = document.querySelector('#myChart');
+
+
+function generationPokemon(){
+    datos.forEach((Pokemon)=>{
+        if(Pokemon.generation.num ===  "generation i"){
+          generationi+=1;
+        }else{
+            generationii+=1;
+        }
+    });
+    generationTotal= generationi+generationii;
+    generationiPercentage=(generationi*100)/generationTotal;
+    generationiiPercentage=(generationii*100)/generationTotal;
+    resultado.push(generationiPercentage);
+    resultado.push(generationiiPercentage);
+
+    return  generationPokemon;
+}
+const ctx = document.getElementById('myChart').getContext('2d');
+function cargarGrafica(){ 
+const myChart = new Chart(grafica, {
+    type: 'bar',
+    data: {
+        labels:variables,
+        datasets: [{
+            label: '# of Votes',
+            data: resultado,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
+return(cargarGrafica);
+}
