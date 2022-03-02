@@ -1,13 +1,11 @@
 import {searchPokemon, type, byHighest, byLowest} from '../src/data.js';
-
-
+import data from '../test/data.mock.js'
 describe('Test de filtrado', () => {
   test('comprobar que es una funcion', () => {
     expect(typeof searchPokemon).toBe('function');
   }); 
-  /*
   test('Test de comportamiento', ()=>{
-    expect(searchPokemon(dataMock.name, "venusaur").toBe([{
+    expect(searchPokemon(data.pokemon.name, "venusaur").toBe([{
       "num": "003",
       "name": "venusaur",
       "generation": {
@@ -114,7 +112,7 @@ describe('Test de filtrado', () => {
   );
 });
 test('Test de comportamiento, es diferente a la data que esperamos', ()=>{
-  expect(searchPokemon(dataMock.name, "venusaur")).not.toStrictEqual([{
+  expect(searchPokemon(data.pokemon.name, "venusaur")).not.toStrictEqual([{
     "num": "003",
     "name": "venusaur",
     "generation": {
@@ -219,7 +217,7 @@ test('Test de comportamiento, es diferente a la data que esperamos', ()=>{
 
   ])
 });
-  */
+
 })
  
 

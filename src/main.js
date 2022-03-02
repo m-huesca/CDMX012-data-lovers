@@ -5,7 +5,7 @@ import data from './data/pokemon/pokemon.js';
 /* Reload página con la imagen*/
 const reload = document.getElementById('logo');
 
-reload.addEventListener('click', _ => { // el _ es para indicar la ausencia de parametros
+reload.addEventListener('click', () => { // el _ es para indicar la ausencia de parametros
     location.reload();
 });
 
@@ -115,6 +115,7 @@ function generationPokemon(){
 
 
 function cargarGrafica(){ 
+// eslint-disable-next-line no-undef
 const myChart = new Chart(grafica, {
     type: 'bar',
     data: {
@@ -141,6 +142,7 @@ const myChart = new Chart(grafica, {
         }
     }
 });
+return myChart;
 }
 
 //grafica 2 - types
@@ -158,7 +160,7 @@ const pokemonRarity = pokemon_database.map(pokemon => pokemon["pokemon-rarity"])
 const rarityGraph = document.querySelector('#myChartRare');
 
 rarityPokemon();
-function rarityPokemon(pokemon_database){
+function rarityPokemon(){
     pokemonRarity.forEach((rarity)=>{
         if(rarity ===  "normal"){
           normal+=1;
@@ -177,6 +179,7 @@ function rarityPokemon(pokemon_database){
 }
 
 function loadChart(){
+// eslint-disable-next-line no-undef
 const myChartRare = new Chart(rarityGraph, {
     type:'doughnut',
     data:{
@@ -192,4 +195,7 @@ const myChartRare = new Chart(rarityGraph, {
       hoverOffset: 4
     }]
   }
-})}
+})
+return myChartRare;
+}
+

@@ -1,7 +1,8 @@
 
 
 export let searchPokemon = function(pokemon_database, pokemon_name) {
-  return pokemon_database.filter(pokemon => pokemon.name === pokemon_name || pokemon.num === pokemon_name);
+  let searchResult = pokemon_database.filter(pokemon => pokemon.name === pokemon_name || pokemon.num === pokemon_name);
+    return searchResult
 }
 export function pokemonCard(pokemon){
   if (pokemon.type.length > 1){
