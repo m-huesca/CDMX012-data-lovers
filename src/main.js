@@ -63,13 +63,24 @@ selectType.addEventListener('change', function () {
 `;
 });
 
-//aplciar Grafica
+//boost graph
 
 document.getElementById("stats").addEventListener("click", function(){
-document.getElementById("cardContainer").innerHTML = cargarGrafica();
-})
+    document.getElementById("cardContainer").innerHTML = cargarGrafica();loadChart(); ShowAndHide();
+    })
 
-//Grafica 
+
+//ocultar sección de pokemon Display
+function ShowAndHide() {
+    var x = document.getElementById("pokemonDisplay");
+    if (x.style.display == 'none') {
+        x.style.display = 'block';
+    } else {
+        x.style.display = 'none';
+    }
+}
+
+//Grafica 1
 let
 generationTotal,
 generationiPercentage,
@@ -109,7 +120,7 @@ const myChart = new Chart(grafica, {
     data: {
         labels:variables,
         datasets: [{
-            label: '# of pokemons',
+            label: 'Number of generation i pokemons',
             data: resultado,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
@@ -131,3 +142,54 @@ const myChart = new Chart(grafica, {
     }
 });
 }
+
+//grafica 2 - types
+
+let
+rarityTotal,
+normalPercentage,
+legendaryPercentage,
+normal = 0,
+legendary = 0,
+rarityResult =[];
+
+const rarityVar =['normal pokemons','legendary pokemons'];
+const pokemonRarity = pokemon_database.map(pokemon => pokemon["pokemon-rarity"]);
+const rarityGraph = document.querySelector('#myChartRare');
+
+rarityPokemon();
+function rarityPokemon(pokemon_database){
+    pokemonRarity.forEach((rarity)=>{
+        if(rarity ===  "normal"){
+          normal+=1;
+        }else{
+            legendary+=1;
+        }
+    });
+
+    rarityTotal= normal+legendary;
+    normalPercentage=(normal*100)/rarityTotal;
+    legendaryPercentage=(legendary*100)/rarityTotal;
+    rarityResult.push(normalPercentage);
+    rarityResult.push(legendaryPercentage);
+
+    return rarityResult;
+}
+
+function loadChart(){
+const myChartRare = new Chart(rarityGraph, {
+    type:'doughnut',
+    data:{
+        labels: rarityVar,
+    datasets: [{
+      label: 'Pokemon Rarity',
+      data: rarityResult,
+      backgroundColor: [
+        'rgb(255, 99, 132, 0.5)',
+        'rgb(54, 162, 235, 0.9)',
+        
+      ],
+      hoverOffset: 4
+    }]
+  }
+})}

@@ -5,6 +5,7 @@ body{
 header{
     background-color: #063376;
     border-color: #B8E5FD;
+    
 }
 
 /*Apartado busqueda por nombre y numero (input y button) (fondo blanco)*/
@@ -51,6 +52,7 @@ p{
 .search1{
     display:flex;
     flex-direction: row ;
+    align-content: center;
     justify-content: center;
     gap: 2%;
     background-color: white;
@@ -202,6 +204,18 @@ background-color:#F0C964;
     flex-direction: column;
     align-items: center;
 }
-.chart{
-    width: 40%;
+.chartBox{
+    display: flex;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    flex-wrap: wrap;
+    
 }
+.chart{
+    display: flex;
+    width:40%;
+
+}
+
