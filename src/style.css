@@ -17,10 +17,11 @@ p{
     font-weight: bold;
 }
 
-.buttonNav{
+#buttonNav{
     display: flex;
     flex-direction: row;
-
+    justify-content:center;
+    align-items:center;
 }
 
 #searchTitle{
@@ -68,12 +69,11 @@ p{
 
 }
 #searchButton,
-.filterButton
+.filterButton, #byHighest, #byLowest, #typeMenu, #stats, button
 {
     height: 25px;
     width: 80px;
     background-color: #79AED8;
-    font-size: 1.1rem;
     color: white;
     font-family: 'Baloo Tamma 2';
     border-radius: 35px;
@@ -105,6 +105,8 @@ p{
     flex-direction: column;
     padding: 10px;
     flex: 15%;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 7px 3px 3px grey;
 }
 
 .searchTitle{
