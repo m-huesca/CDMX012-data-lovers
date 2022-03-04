@@ -45,7 +45,7 @@ export const byLowest = function (pokemons) {
   })
 }
 
-//grafica 
+
 
 
 
