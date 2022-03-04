@@ -1,4 +1,4 @@
-import {searchPokemon, type, byHighest, byLowest} from '../src/data.js';
+import {searchPokemon, type, byHighest, byLowest, pokemonCard} from '../src/data.js';
 import data from '../test/data.mock.js'
 
 
@@ -1426,21 +1426,8 @@ describe('Test de orden por mayor', () => {
         ]);
     })
     })
-
-/*
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  }); 
-*/
 })
+describe('Test de pokemonCard', () => {
+    test('comprobar que pokemonCard es una funcion', () => {
+      expect(typeof pokemonCard).toBe('function');
+    }); })
